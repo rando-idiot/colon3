@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --back-light: #fbfbfe;
+    --text-light: #040316;
+    --accent-light: #2f27ce;
+
+    --back-dark: #010104;
+    --text-dark: #eae9fc;
+    --accent-dark: #3a31d8;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    transition: background-color 0.5s, color 0.5s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.centered-text {
+    font-size: 4rem;
+    cursor: pointer;
+    transition: transform 0.5s, color 0.5s;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+body.light-mode {
+    background-color: var(--back-light);
+    color: var(--text-light);
+}
+
+body.dark-mode {
+    background-color: var(--back-dark);
+    color: var(--text-dark);
+}
+
+.light-mode .centered-text.clicked {
+    color: var(--accent-light);
+    transform: rotate(360deg);
+}
+
+.dark-mode .centered-text.clicked {
+    color: var(--accent-dark);
+    transform: rotate(360deg);
+}
